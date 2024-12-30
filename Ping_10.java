@@ -2,14 +2,13 @@ import java.net.*;
 import java.io.*;
 
 // command to run : sudo java Ping.java <hostname>
-public class Ping {
+public class Ping_10 {
     public static void main(String[] args) {
-        // Check if the user provided a hostname as an argument
         if (args.length != 1) {
             System.out.println("Usage: java Ping <hostname>");
             return;
         }
-        String hostname = args[0]; // Get the hostname from command-line arguments
+        String hostname = args[0];
         try {
             System.out.println("Pinging " + hostname + "...");
             InetAddress inetAddress = InetAddress.getByName(hostname);

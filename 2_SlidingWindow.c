@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <unistd.h>
 #include <time.h>
 
 #define WINDOW_SIZE 4
@@ -19,9 +18,9 @@ int main()
 {
 
     srand(time(0));
-    printf("Starting Go-Back-N Protocol Simulation...\n\n");
+    printf("[Sender] Starting Sliding Window Protocol with Go-Back-N.\n");
     sender();
-    printf("\nSimulation complete.\n");
+    printf("[Sender] Transmission completed.\n");
     return 0;
 }
 void sender()
@@ -33,13 +32,13 @@ void sender()
         {
             if (!frame_acknowledged[i])
             {
-                printf("Sender: Sending Frame %d\n", i);
+                printf("[Sender] Sending Frame %d\n", i);
                 receiver(i);
                 frames_in_window++;
             }
         }
         int ack = next_frame_to_receive - 1;
-        printf("Sender: Acknowledgment received for Frame %d\n", ack);
+        printf("[Sender] ACK for Frame %d received successfully.\n", ack);
         if (ack > ack_received)
         {
             for (int j = ack_received + 1; j <= ack; j++)
@@ -51,9 +50,8 @@ void sender()
         }
         else
         {
-            printf("Sender: No new acknowledgment, resending frames from %d\n", next_frame_to_send);
+            printf("[Sender] No new acknowledgment, resending frames from %d\n", next_frame_to_send);
         }
-        usleep(500000);
     }
 }
 void receiver(int frame)
@@ -61,15 +59,15 @@ void receiver(int frame)
     int rand_failure = rand() % 5;
     if (rand_failure == 0)
     {
-        printf("Receiver: Frame %d lost (simulated)\n", frame);
+        printf("[Receiver] Frame %d lost during transmission.\n", frame);
     }
     else if (frame == next_frame_to_receive)
     {
-        printf("Receiver: Frame %d received\n", frame);
+        printf("[Receiver] Frame %d received\n", frame);
         next_frame_to_receive++;
     }
     else
     {
-        printf("Receiver : Frame %d discarded\n", frame);
+        printf("[Receiver] Frame %d discarded\n", frame);
     }
 }
