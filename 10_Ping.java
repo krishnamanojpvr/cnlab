@@ -2,7 +2,7 @@ import java.net.*;
 import java.io.*;
 
 // command to run : sudo java Ping_10.java <hostname>
-public class Ping_10 {
+class Ping {
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Usage: java Ping_10 <hostname>");

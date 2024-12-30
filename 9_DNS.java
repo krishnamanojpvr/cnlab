@@ -1,7 +1,7 @@
 import java.net.*;
 import java.util.Scanner;
 
-public class DNS_9 {
+class DNS {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a domain name :");
