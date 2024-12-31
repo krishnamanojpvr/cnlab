@@ -1,7 +1,7 @@
 import java.net.*;
 import java.io.*;
 
-// command to run : sudo java Ping_10.java <hostname>
+// command to run : sudo java Ping.java <hostname>
 class Ping {
     public static void main(String[] args) {
         if (args.length != 1) {
