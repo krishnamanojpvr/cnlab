@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class CRC {
+public class CRC {
 
     static String data;
     static String generator;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-class BroadcastTree {
+public 
+class SubnetBroadcastTree {
 
     // Function to convert an IP address to a 32-bit integer
     public static int ipToInt(String ip) {

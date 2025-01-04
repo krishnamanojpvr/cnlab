@@ -1,6 +1,6 @@
 import java.util.Random;
 
-class SlidingWindow {
+public class GoBackN {
 
     private static final int WINDOW_SIZE = 4;
     private static final int TOTAL_FRAMES = 10;
@@ -11,7 +11,7 @@ class SlidingWindow {
     private static boolean[] frameAcknowledged = new boolean[TOTAL_FRAMES];
 
     public static void main(String[] args) {
-        System.out.println("[Sender] Starting Sliding Window Protocol with Go-Back-N.");
+        System.out.println("[Sender] Starting Go-Back-N.");
         sender();
         System.out.println("[Sender] Transmission completed.");
     }

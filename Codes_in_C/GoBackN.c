@@ -18,7 +18,7 @@ int main()
 {
 
     srand(time(0));
-    printf("[Sender] Starting Sliding Window Protocol with Go-Back-N.\n");
+    printf("[Sender] Starting Go-Back-N.\n");
     sender();
     printf("[Sender] Transmission completed.\n");
     return 0;
