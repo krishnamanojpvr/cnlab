@@ -5,7 +5,7 @@ import java.io.*;
 public class Ping {
     public static void main(String[] args) {
         if (args.length != 1) {
-            System.out.println("Usage: java Ping_10 <hostname>");
+            System.out.println("Usage: java Ping <hostname>");
             return;
         }
         String hostname = args[0];
