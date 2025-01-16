@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class GoBackN {
+public class SWindowGoBackN {
 
     private static final int WINDOW_SIZE = 4;
     private static final int TOTAL_FRAMES = 10;
